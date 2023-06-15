@@ -11,7 +11,7 @@ class Article extends Model
 
     // nom au pluriel car un user peut poster plusieurs commentaires
     // cardinalité 1,1
-    public function gammes()
+    public function gamme()
     {
         return $this->belongsTo(Gamme::class);
     }
