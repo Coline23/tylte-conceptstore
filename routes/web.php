@@ -1,6 +1,10 @@
 <?php
 
+use App\Models\Role;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); //permet de renvoyer vers l'accueil
+Route::get('/', [HomeController::class, 'index'])->name('home'); //permet de renvoyer vers l'accueil
+
+Route::resource('/users', UserController::class)->except('index', 'create', 'store','show');
 
 Auth::routes();
