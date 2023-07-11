@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CommandeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,7 @@ use App\Http\Controllers\UserController;
 Route::get('/', [HomeController::class, 'index'])->name('home'); //permet de renvoyer vers l'accueil
 
 Route::resource('/users', UserController::class)->except('index', 'create', 'store','show');
+
+Route::resource('/commandes', CommandeController::class)->except('index', 'create');
 
 Auth::routes();

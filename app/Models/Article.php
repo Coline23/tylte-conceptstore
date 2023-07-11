@@ -16,10 +16,10 @@ class Article extends Model
         return $this->belongsTo(Gamme::class);
     }
 
-     // nom au pluriel car un article peut avoir plusieurs commandes 
+    // nom au pluriel car un article peut avoir plusieurs commandes 
     // cardinalité 0,n
     public function commandes_articles()
     {
-            return $this->belongsToMany(Commande::class, 'commandes_articles');
+        return $this->belongsToMany(Commande::class, 'commandes_articles')->withPivot('quantite');
     }
 }

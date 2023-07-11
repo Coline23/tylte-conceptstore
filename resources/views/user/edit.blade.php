@@ -111,6 +111,39 @@
         <p class="text-center p-5"> Vous n'avez pas encore passé de commande.</p>
     @endif
 
+    <h4 class="text-center pt-5">Mes événements</h4>
+
+    @if (isset($user->evenements) && count($user->evenements) > 0)
+        <div class="container">
+            <table class="table table border border-primary">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">date</th>
+                        <th scope="col">heure</th>
+                        <th scope="col">nom</th>
+                        <th scope="col">détails</th>
+                    </tr>
+                </thead>
+                @foreach ($user->evenements as $evenement)
+                    <tr>
+                        <td>{{ $evenement->nom }}</td>
+                        <td>{{ $evenement->date }}</td>
+                        <td>
+                            @php echo \Carbon\Carbon::parse($evenement->created_at)->translatedFormat('l d F Y à H\hi');
+                            @endphp</td>
+                        <td>
+                            <form action="{{ route('evenements.show', $evenement) }}" method="get">
+                                <button type="submit" class="btn btn-primary">Détails</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </table>
+        </div>
+    @else
+        <p class="text-center p-5"> Vous n'avez pas encore participé à d'événements.</p>
+    @endif
+
     <form action="{{route('users.destroy', $user)}}" method="post">
         @csrf
         @method("delete")
