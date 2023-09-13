@@ -15,7 +15,8 @@ class EvenementSeeder extends Seeder
     {
         // création d'un evenement X
         Evenement::create([
-            'description_courte' => 'TYLTE"RUN#65 x Millet',
+            'nom' => 'TYLTE"RUN#65 x Millet',
+            'description_courte' => 'Session running',
             'description_longue' => 'Rendez-vous Jeudi 29 juin pour une session course à pied de 1h-1h30 vers le Mont Veyrier en présence de lathlète Millet, Simon Paccard ! Départ du parking du petit por à Annecy-le-Vieux .
             Testez les produits MILLET : Sac à dos Intense 5L, Intense 12L et le Intense Belt.',
             'date' => '2023-06-23',
@@ -27,7 +28,8 @@ class EvenementSeeder extends Seeder
 
         // création d'un evenement Y
         Evenement::create([
-            'description_courte' => 'SAMAYA x TYLTE',
+            'nom' => 'SAMAYA x TYLTE',
+            'description_courte' => 'Test sacs à dos',
             'description_longue' => 'Venez découvrir les innovations Samaya et leur processus de développement à la boutique Tylte. Au programme, projection de une vidéo centrée sur la R&D des developpement produits et un moment de échange avec une partie de la team developpement afin de mettre en lumière les enjeux et les procédés de développement des produits techniques de montagne avec comme exemple la gamme de sacs à dos « Ultra » de Samaya.',
             'date' => '2023-07-20',
             'heure_debut' => '18h',

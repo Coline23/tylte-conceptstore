@@ -3,10 +3,13 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Role;
+use App\Models\Commande;
+use App\Models\Evenement;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -52,7 +55,7 @@ class User extends Authenticatable
     }
 
     // nom au pluriel car un user peut avoir plusieurs reservations d'event
-    // cardinalité 0,n
+    // cardinalité n,n
     public function reservations()
     {
             return $this->belongsToMany(Evenement::class, 'reservations');
@@ -69,5 +72,13 @@ class User extends Authenticatable
     {
         //return $this->role == "admin";
         return $this->role_id == 2;
+    }
+
+    // permet de vérifier si un article est dans les favoris de l'utilisateur connecté
+    // dans la vue, on utilise la syntaxe suivante : @if (Auth::user()->isInFavorites($article))
+    
+    public function isInReservation(Evenement $evenement)
+    {
+        return $evenement->reservations()->where('user_id', $this->id)->exists();
     }
 }

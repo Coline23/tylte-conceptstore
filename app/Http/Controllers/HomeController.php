@@ -15,4 +15,24 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function concept()
+    {
+        return view('concept');
+    }
+
+    public function espacebarjeux()
+    {
+        return view('espacebarjeux');
+    }
+
+    public function shop()
+    {
+        return view('shop');
+    }
 }

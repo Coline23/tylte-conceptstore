@@ -6,3 +6,705 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+/* INFOS DOC
+    - Document : Concept Store Tylte
+    - Version : 1.0.0
+    - Author : Coline
+*/
+
+/* COLORS 
+    - default body text #26316A (bleu)
+    - h1 #D98468 (terracotta) ou #26316A (bleu)
+    - h2 #26316A (bleu)
+    - h3 #26316A (bleu)
+
+    - button #D98468 (terracotta) ou #26316A (bleu)
+    - button:hover #D98468 (terracotta) ou #26316A (bleu)
+
+    - border : none 
+    - icons #26316A (bleu)
+*/
+
+/* FONTS
+    - Default : 'Sora', sans-serif
+    - Titres : 'Barlow', sans-serif & 'Barlow Semi Condensed', sans-serif
+*/
+
+/* CSS DIRECTORY
+    1. Global
+    2. Header
+    3. Le concept
+    4. La team
+    5. Contact
+*/
+
+/* GLOBAL *****************/
+html {
+    background-color: white;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 0px 0 1px 0;
+}
+
+/* HomePage *****************/
+/* HEADER HP *****************/
+header {
+    background-image: linear-gradient(rgba(205, 209, 228, 0.3), rgba(205, 209, 228, 0.3)), url("./images/test-header2.png");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+header nav .container a {
+    color: #26316A;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 200%;
+    font-style: bold;
+    line-height: 85%;
+}
+
+/* Style de base pour la dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style du bouton principal */
+  .icon-connexion {
+    cursor: pointer;
+  }
+  
+  /* Style de la dropdown contenu */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style des liens dans la dropdown */
+  .dropdown-content a {
+    color: blue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Changement de couleur du lien lorsque survolé */
+  .dropdown-content a:hover {background-color: #26316A;}
+  
+  /* Affichage de la dropdown contenu lors du survol du bouton principal */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Style du curseur lorsque survolé */
+  .dropdown:hover .dropbtn {background-color: #26316A;}
+  
+/*nav {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+} **/
+
+.home-title .center-block {
+    text-align: right;
+    margin-top: 90px;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 160%;
+    margin: 20px;
+    margin-left: 20px;
+    float: right;
+    font-weight: 700;
+}
+
+.fw-bold {
+    font-family: 'Shadows Into Light', cursive;
+    text-align: right;
+    font-size: 500%;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.intro-espaces {
+    color: #26316A;
+    opacity: 80%;
+    text-align: right;
+}
+
+.intro-espaces h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 180%;
+    padding-bottom: 10px;
+}
+
+/* LOGO *************/
+.logo-tylte img {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 30vh;
+    height: 80%;
+}
+
+/* BOUTON ***************/
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    margin-bottom: 20px;
+}
+
+.btn-full {
+    background-color: #D98468;
+    color: #26316A;
+    margin-top: 20px;
+    font-size: 150%;
+    font-family: 'Barlow', sans-serif;
+    font-weight: bolder;
+    opacity: 90%;
+}
+
+.btn-concept {
+    background-color: #26316A;
+    color: #D98468;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 150%;
+    font-family: 'Barlow', sans-serif;
+    font-weight: bolder;
+    opacity: 90%;
+}
+
+.btn-full:hover {
+    background-color: #26316A !important;
+    color: #D98468 !important;
+}
+
+.btn-concept:hover {
+    background-color: #D98468 !important;
+    color: #26316A !important;
+}
+
+/* EN BREF ***************/
+.enbref h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #26316A;
+    font-weight: 600;
+    font-size: 250%;
+    margin-bottom: 50px;
+    width: 80%;
+    text-align: center;
+}
+
+.enbref p {
+    font-family: 'Shadows Into Light', cursive;    
+    color: #26316A;
+    font-weight: 600;
+    font-size: 150%;
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+/* LE CONCEPT ***************/
+
+#le-concept {
+    background-color: #DFBBAF;
+}
+
+.desc-concept {
+    text-align: center;
+    margin: 30px;
+}
+
+.desc-concept h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #26316A;
+    font-weight: 600;
+    font-size: 250%;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.desc-concept p {
+    color: #26316A;
+    line-height: 30px;
+    font-size: large;
+    margin-left: 5px;
+    text-align: center;
+}
+
+#desc-concept {
+    object-fit: cover;
+    object-position: 0% 0;
+    width: 100%;
+}
+
+/* LA TEAM ***************/
+
+.la-team {
+    background-color: #EEEFF3;
+    padding-top: 20px;
+    color: #26316A;
+}
+
+.la-team h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #26316A;
+    font-weight: 600;
+    font-size: 250%;
+    text-decoration: underline;
+    margin-bottom: 50px;
+    width: 80%;
+    text-align: center;
+}
+
+.details-team img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.details-team h4 {
+    text-align: center;
+    padding: 20px;
+}
+
+.details-team p {
+    text-align: center;
+    line-height: 30px;
+    padding: 20px;
+}
+
+
+/* FOOTER ***************/
+footer {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.details-marque img {
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+.details-contact {
+    color: #26316A;
+    margin-top: 30px;
+}
+
+.details-rs {
+    color: #26316A;
+    margin-top: 30px;
+}
+
+.icon-rs {
+    color: #26316A;
+}
+
+.icon-rs:hover {
+    color: #D98468;
+}
+
+/* PAGE CONTACT ***/
+.contactez-nous {
+    background-color: #26316A;
+    opacity: 50%;
+}
+
+/* MEDIA QUERIES ***/
+
+@media screen and (max-width: 950px) {
+    .logo-tylte img {
+        top: 60%;
+        height: 50%;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        margin-bottom: 10px;
+    }
+
+    .btn-full {
+        margin-top: 10px;
+        font-size: 140%;
+    }
+
+    .btn-concept {
+        margin-top: 10px;
+        font-size: 140%;
+    }
+}
+
+/* Nos espaces *****************/
+
+/* ESPACE BAR&JEUX ***************/
+
+#espace-bar {
+    background-color: #DFBBAF;
+}
+
+.desc-espace {
+    text-align: center;
+    margin: 30px;
+}
+
+.desc-espace h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #26316A;
+    font-weight: 600;
+    font-size: 250%;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.desc-espace p {
+    color: #26316A;
+    line-height: 30px;
+    font-size: large;
+    margin-left: 5px;
+    text-align: center;
+}
+
+#desc-espace {
+    object-fit: cover;
+    width: 100%;
+}
+/* ESPACE SHOP ***************/
+
+#espace-shop {
+    background-color: #EEEFF3;
+    color: #DFBBAF;
+}
+
+/* NOS EVENTS ***************/
+
+body{
+    background: #F4F7FD;
+    margin-top:20px;
+}
+
+.card-margin {
+    margin-bottom: 1.875rem;
+}
+
+.card {
+    border: 0;
+    box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    background-clip: border-box;
+    border: 1px solid #e6e4e9;
+    border-radius: 8px;
+}
+
+.card .card-header.no-border {
+    border: 0;
+}
+.card .card-header {
+    background: none;
+    padding: 0 0.9375rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+}
+.card-header:first-child {
+    border-radius: calc(8px - 1px) calc(8px - 1px) 0 0;
+}
+
+.widget-49 .widget-49-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #edf1fc;
+  width: 14rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-primary .widget-49-date-day {
+  color: #4e73e5;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-primary .widget-49-date-month {
+  color: #4e73e5;
+  line-height: 1;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fcfcfd;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-secondary .widget-49-date-day {
+  color: #dde1e9;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-secondary .widget-49-date-month {
+  color: #dde1e9;
+  line-height: 1;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e8faf8;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-success .widget-49-date-day {
+  color: #17d1bd;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-success .widget-49-date-month {
+  color: #17d1bd;
+  line-height: 1;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ebf7ff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-info .widget-49-date-day {
+  color: #36afff;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-info .widget-49-date-month {
+  color: #36afff;
+  line-height: 1;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: floralwhite;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-warning .widget-49-date-day {
+  color: #FFC868;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-warning .widget-49-date-month {
+  color: #FFC868;
+  line-height: 1;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-danger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #feeeef;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-danger .widget-49-date-day {
+  color: #F95062;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-danger .widget-49-date-month {
+  color: #F95062;
+  line-height: 1;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fefeff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-light .widget-49-date-day {
+  color: #f7f9fa;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-light .widget-49-date-month {
+  color: #f7f9fa;
+  line-height: 1;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ebedee;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-dark .widget-49-date-day {
+  color: #394856;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-dark .widget-49-date-month {
+  color: #394856;
+  line-height: 1;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f0fafb;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-base .widget-49-date-day {
+  color: #68CBD7;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-base .widget-49-date-month {
+  color: #68CBD7;
+  line-height: 1;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-meeting-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-meeting-info .widget-49-pro-title {
+  color: #3c4142;
+  font-size: 14px;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-meeting-info .widget-49-meeting-time {
+  color: #B1BAC5;
+  font-size: 13px;
+}
+
+.widget-49 .widget-49-meeting-points {
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: .5rem;
+}
+
+.widget-49 .widget-49-meeting-points .widget-49-meeting-item {
+  //display: list-item;
+  color: #727686;
+}
+
+.widget-49 .widget-49-meeting-points .widget-49-meeting-item span {
+  margin-left: .5rem;
+}
+
+.widget-49 .widget-49-meeting-action {
+  text-align: right;
+}
+
+.widget-49 .widget-49-meeting-action a {
+  text-transform: uppercase;
+}

@@ -17,6 +17,7 @@ class EvenementFactory extends Factory
     public function definition(): array
     {
         return [
+            'nom' => fake()-> sentence(4),
             'description_courte' => fake()->paragraph(),
             'description_longue' => fake()->paragraphs(2,true),
             'date' => fake()->date('Y_m_d'),

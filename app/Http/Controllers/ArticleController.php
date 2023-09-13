@@ -14,7 +14,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::all();
-
+        return view('articles/index', ['articles' => $articles]);
     }
 
     /**
@@ -24,7 +24,7 @@ class ArticleController extends Controller
     {
         $request->validate([
             'nom' => 'required|min:5|max:30',
-            'description_courte' => 'required|min:10|max:100',
+            'description_courte' => 'required|min:10|max:255',
             'description_longue' => 'required|min:50|max:500',
             'prix' => 'required',
             'image' => 'required|min:5|max:25',
@@ -39,9 +39,9 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Article $article)
     {
-        //
+         return view('articles/show', ['article' => $article]);
     }
 
     /**
