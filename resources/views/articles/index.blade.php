@@ -5,11 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid text-center mb-4">
-        <img class="w-75 border border-primary" src="{{ asset('images/ranges.jpg') }}" alt="gammes">
-    </div>
-
-    <h1 class='pb-5 text-center'>Tous les articles</h1>
+    <h1 class='mt-5 pt-5 text-center' style="font-family: Shadows Into Light, cursive; color: #26316A; font-size: 300%">Tous les articles</h1>
 
     <div class="container ranges">
         <div class="row">
@@ -17,7 +13,8 @@
                 <div class="container">
                     <div class="row">
                         @foreach ($articles as $article)
-                            <div class="card text-center col-md-4 col-lg-3 p-3 m-3\" style="width: 18rem;">
+                            <div class="text-center col-md-4 col-lg-3 p-3">
+                                <div class="card text-center">
                                 <img class="card-img-top" src="{{ asset("images/$article->image") }}" alt="article">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bold">{{ $article->nom }}</h5>
@@ -41,6 +38,7 @@
                                         </form>
                                     @endif
 
+                                </div>
                                 </div>
                             </div>
                         @endforeach

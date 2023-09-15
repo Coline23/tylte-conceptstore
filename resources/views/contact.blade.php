@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<section class="contactez-nous">
+<section class="contactez-nous pt-5 mt-5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-11">
@@ -13,50 +13,48 @@
                     <div class="row no-gutters justify-content-between">
                         <div class="col-lg-6 d-flex align-items-stretch">
                             <div class="info-wrap w-100 p-5">
-                                <h3 class="mb-4">Contact us</h3>
+                                <h3 class="mb-4 text-white">Contactez-nous</h3>
                                 <div class="dbox w-100 d-flex align-items-start">
                                     <div class="icon d-flex align-items-center justify-content-center">
-                                        <span class="fa fa-map-marker"></span>
+                                        <span class="fa fa-map-marker" style="color: antiquewhite"></span>
                                     </div>
                                     <div class="text pl-4">
-                                        <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY
-                                            10016</p>
+                                        <p class="text-white"><span>Addresse :</span> 175 rue de la Nature 74330 Into The Wild</p>
                                     </div>
                                 </div>
                                 <div class="dbox w-100 d-flex align-items-start">
                                     <div class="icon d-flex align-items-center justify-content-center">
-                                        <span class="fa fa-phone"></span>
+                                        <span class="fa fa-phone" style="color: antiquewhite"></span>
                                     </div>
                                     <div class="text pl-4">
-                                        <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                        <p class="text-white"><span>Téléphone : 06 88 23 09 28</span></p>
                                     </div>
                                 </div>
                                 <div class="dbox w-100 d-flex align-items-start">
                                     <div class="icon d-flex align-items-center justify-content-center">
-                                        <span class="fa fa-paper-plane"></span>
+                                        <span class="fa fa-paper-plane" style="color: antiquewhite"></span>
                                     </div>
                                     <div class="text pl-4">
-                                        <p><span>Email:</span> <a
-                                                href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                        <p class="text-white"><span>Email : tylteclothes@gmail.com</span></p>
                                     </div>
                                 </div>
                                 <div class="dbox w-100 d-flex align-items-start">
                                     <div class="icon d-flex align-items-center justify-content-center">
-                                        <span class="fa fa-globe"></span>
+                                        <span class="fa fa-globe" style="color: antiquewhite"></span>
                                     </div>
                                     <div class="text pl-4">
-                                        <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                                        <p class="text-white"><span>Site internet : Vous êtes dessus ;)</span></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <div class="contact-wrap w-100 p-md-5 p-4">
-                                <h3 class="mb-4">Get in touch</h3>
+                                <h3 class="mb-4 text-white">Get in touch</h3>
                                 <div id="form-message-warning" class="mb-4"></div>
-                                <div id="form-message-success" class="mb-4">
+                                {{-- <div id="form-message-success" class="mb-4">
                                     Your message was sent, thank you!
-                                </div>
+                                </div> --}}
                                 <form method="POST" id="contactForm" name="contactForm">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -85,8 +83,8 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="submit" value="Send Message"
-                                                    class="btn btn-primary">
+                                                <input type="submit" value="Envoyer un message"
+                                                    class="btn btn-success mt-4">
                                                 <div class="submitting"></div>
                                             </div>
                                         </div>

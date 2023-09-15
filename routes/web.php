@@ -34,7 +34,7 @@ Route::get('/shop', [HomeController::class, 'shop'])->name('shop'); //permet de 
 Route::resource('/users', UserController::class)->except('index', 'create', 'store','show');
 
 //Commandes
-Route::resource('/commandes', CommandeController::class)->except('store', 'edit', 'update', 'destroy');
+Route::resource('/commandes', CommandeController::class)->except('edit', 'update', 'destroy');
 
 //Evenements
 Route::resource('/evenements', EvenementController::class)->except('create');
@@ -54,3 +54,7 @@ Route::get('cart/empty', [CartController::class, 'empty'])->name('cart.empty');
 Route::get('cart/emptyAfterOrder', [CartController::class, 'emptyAfterOrder'])->name('cart.emptyAfterOrder');
 Route::get('cart/validation', [CartController::class, 'validation'])->name('cart.validation');
 Route::post('cart/validation', [CartController::class, 'validation'])->name('cart.validation');
+Route::post('cart/creneau', [CartController::class, 'creneau'])->name('cart.creneau');
+
+//Admin
+Route::get('admin/index', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index');

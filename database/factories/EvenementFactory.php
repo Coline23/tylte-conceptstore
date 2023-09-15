@@ -23,8 +23,8 @@ class EvenementFactory extends Factory
             'date' => fake()->date('Y_m_d'),
             'heure_debut' => '14h',
             'heure_fin' => '17h',
-            'max_personnes' => fake()->randomDigitNotNull(),
-            'nombre_inscrits' => fake()->randomDigit(),
+            'max_personnes' => rand(10,15),
+            'nombre_inscrits' => rand(1,10),
         ];
     }
 }

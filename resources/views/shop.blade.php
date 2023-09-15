@@ -7,7 +7,7 @@
 @section('content')
 
 <!--ESPACE SHOP-->
-<section id="espace-shop">
+<section id="espace-shop mt-5 pt-5">
 <div class="row">
 
     <div class="col-md-6">
@@ -17,11 +17,10 @@
     <div class="col-md-6">
         <div class="desc-espace">
             <div class="row">
-                <div class="col-md-12 mx-auto">
+                <div class="col-md-12 mx-auto p-5 mt-5 pt-5">
                     <h2>ESPACE SHOP</h2>
-                    <p>Le but de l'espace Shop est de mettre en avant les créateurs qui se lancent et qui font du made in local. Nous proposerons également la collection Tylte blablabla.<br><br> 
-                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.<br><br>
-                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. </p>
+                    <p>Le but de l'espace Shop est de mettre en avant les créateurs qui se lancent et qui font du made in local. Nous proposerons également la collection Tylte, en collaboration avec l'un des créateurs, Julien, pour des t-shirts 100% made in Europe.<br><br> 
+                        Nous vous proposerons une sélection soigneusement choisie de vêtements, d'accessoires et même d'articles de décoration ou de jeux, le tout dans un environnement pensé pour refléter la van life, la nature et l'outdoor.</p>
                     <a href="{{ route('gammes.index') }}" class="btn btn-full">Nos univers</a>
                 </div>
             </div>

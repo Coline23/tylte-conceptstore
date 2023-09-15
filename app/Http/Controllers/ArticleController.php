@@ -26,7 +26,7 @@ class ArticleController extends Controller
             'nom' => 'required|min:5|max:30',
             'description_courte' => 'required|min:10|max:255',
             'description_longue' => 'required|min:50|max:500',
-            'prix' => 'required',
+            'prix' => 'required|max:500',
             'image' => 'required|min:5|max:25',
             'stock' => 'required',
             'gamme_id' => 'required'
@@ -65,12 +65,14 @@ class ArticleController extends Controller
             'description_courte' => 'required|min:10|max:100',
             'description_longue' => 'required|min:50|max:500',
             'prix' => 'required',
-            'image' => 'required|min:5|max:25',
+            'image' => 'image|mimes:jpeg,png,jpg,git,svg|max:2048',
             'stock' => 'required',
             'gamme_id' => 'required'
         ]);
 
-        $article->update($request->except('_token'));
+        $article->update($request->except(['_token', 'image']));
+        $article->image= isset($request['image']) ? uploadImage($request['image']) : $article->image;
+
         return redirect()->route('admin.index')->with('message', 'Article modifié avec succès');
     }
 

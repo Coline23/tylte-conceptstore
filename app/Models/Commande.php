@@ -19,10 +19,20 @@ class Commande extends Model
         return $this->belongsTo(User::class);
     }
 
-     // nom au pluriel car un article peut avoir plusieurs commandes 
+    // nom au pluriel car un article peut avoir plusieurs commandes 
     // cardinalité 1,n
-    public function commandes_articles()
+    public function articles()
     {
-            return $this->belongsToMany(Article::class, 'commandes_articles');
+        return $this->belongsToMany(Article::class, 'commandes_articles');
     }
+
+
+ 
+
+    protected $fillable = [
+        'prix',
+        'date_retrait',
+        'heure_retrait',
+        'user_id',
+    ];
 }

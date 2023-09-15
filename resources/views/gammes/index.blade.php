@@ -5,25 +5,22 @@
 @endsection
 
 @section('content')
-<div class="container-fluid text-center mb-4">
-    <img class="w-75 border border-primary" src="{{ asset('images/ranges.jpg') }}" alt="gammes">
-</div>
 
-<h1 class='pb-5 text-center'>Nos différents univers</h1>
+<h1 class='pb-2 text-center pt-5 mt-5' style="font-family: Shadows Into Light, cursive; color: #26316A; font-size: 300%">Nos différents univers</h1>
 
 <div class="container ranges">
     <div class="row">
 
         @foreach ($gammes as $gamme)
 
-            <div class="container p-5">
-                <div class="row p-5 justify-content-center">
+            <div class="container p-5 border border-primary-subtle rounded">
+                <div class="row justify-content-center">
                     <h2>{{ $gamme->nom }}</h2>
                 </div>
                 <div class="container">
                     <div class="row">
                         @foreach ($gamme->articles as $article)
-                            <div class="card text-center col-md-4 col-lg-3 p-3 m-3\" style="width: 18rem;">
+                            <div class="card text-center col-md-4 col-lg-3 p-3 m-3\ m-3">
                                 <img class="card-img-top" src="{{ asset("images/$article->image") }}" alt="article">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bold">{{ $article->nom }}</h5>
@@ -45,7 +42,7 @@
                                             <input type="number" min="1" max="9" name="quantite"
                                                 class="form-control mr-2"
                                                 value="{{ isset(session('cart')[$article->id]) ? session('cart')[$article->id]['quantite'] : 1 }}">
-                                            <button type="submit" class="btn btn-concept">+ Ajouter au panier</button>
+                                            <button type="submit" class="btn btn-concept">+ Ajout rapide</button>
                                         </form>
                                     @endif
 

@@ -14,10 +14,17 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    /** public function edit(User $user)
+    *{
+     *   $user->load('commandes');
+      *  return view('user/edit', ['user' => $user]);
+    *}
+    */
     public function edit(User $user)
     {
+        $user = User::find($user->id);
         $user->load('commandes');
-        return view('user/edit', ['user' => $user]);
+        return view('user.account', ['user' => $user]);
     }
 
     /**
@@ -75,7 +82,7 @@ class UserController extends Controller
     {
         // on vérifie que c'esrt bien l'utilisateur connecté qui fait la demande de suppression
         // (les id doivent être identiques)
-        if (Auth::user()->id == $user->id) {
+        if (Auth::user()->id == $user->id || Auth::user()->role_id==2) {
             $user->delete();                    // on réalise la suppression
             return redirect()->route('home')->with('message', 'Le compte a bien été supprimé');
         } else {

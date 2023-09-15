@@ -24,14 +24,15 @@
 <section id="espace-bar">
 <div class="row">
 
-    <div class="col-md-6">
+    <div class="col-md-6 mx-auto">
         <div class="desc-espace">
             <div class="row">
-                <div class="col-md-12 mx-auto">
-                    <h2>Espace Bar <br>& Petite restauration</h2>
+                <div class="col-md-12 ms-auto pt-5">
+                    <h2 class="pb-5">Espace Bar <br>& Petite restauration</h2>
                     <p>Le bar Tylte vous propose : six tireuses à bière en libre-service, un large choix de bières en bouteille, des vins originaux, des sodas bio, des jus de fruits, des sirops et des boissons chaudes éthiques.</p>
-                    <p>En cas de petite faim, nous vous proposons différentes tapas avec des fromages et charcuteries de Haute Savoie, sans oublier les tapas végétariennes.</p>
-                    <a href="" class="btn btn-concept">LA CARTE</a>
+                    <p class="p-5">En cas de petite faim, nous vous proposons différentes tapas avec des fromages et charcuteries de Haute Savoie, sans oublier les tapas végétariennes.</p>
+                    <a href="./images/carte-bar.pdf" class="btn btn-concept" target="_blank" >LA CARTE DU BAR</a>
+                    <a href="./images/carte-cafe.pdf" class="btn btn-concept" target="_blank" >LA CARTE DU CAFÉ</a>
                 </div>
             </div>
         </div>
@@ -54,10 +55,34 @@
     <div class="col-md-6">
         <div class="desc-espace">
             <div class="row">
-                <div class="col-md-12 mx-auto">
-                    <h2>LES JEUX</h2>
+                <div class="col-md-12 ms-auto">
+                    <h2>Les jeux</h2>
                     <p>Ici vous trouverez plus de 500 jeux de société de tout type, pour jouer entre amis, en famille, en couple ou même avec de nouveaux joueurs... Tous nos jeux sont référencés sur le site, il ne vous reste plus qu'à choisir ! </p>
                 </div>
+                <div id="carouselExampleAutoplaying" class="carousel slide mx-auto" style="width: 50%" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./images/azul-jeu.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/7-wonders-jeu.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/splendor-jeu.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/citadelles-jeu.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
         </div>
     </div>

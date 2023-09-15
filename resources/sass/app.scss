@@ -62,13 +62,21 @@ header {
     background-size: cover;
 }
 
-header nav .container a {
-    color: #26316A;
+nav .container-fluid a {
+    color: white !important;
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 500;
-    font-size: 200%;
+    font-size: 150%;
     font-style: bold;
-    line-height: 85%;
+    line-height: 75%;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+}
+
+.navbar-toggler {
+  border-color: white;
 }
 
 /* Style de base pour la dropdown */
@@ -121,7 +129,7 @@ header nav .container a {
 .navbar-expand-md .navbar-nav .nav-link {
     color: white;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 160%;
+    font-size: 100%;
     margin: 20px;
     margin-left: 20px;
     float: right;
@@ -149,13 +157,21 @@ header nav .container a {
     padding-bottom: 10px;
 }
 
+
 /* LOGO *************/
 .logo-tylte img {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 30vh;
-    height: 80%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 30vh;
+  height: 80%;
+}
+
+#logo-tylte {
+  object-fit: cover;
+  width: 20%;
+  padding-left: 30px;
+  padding-top: 2px;
 }
 
 /* BOUTON ***************/
@@ -326,7 +342,7 @@ footer {
 /* PAGE CONTACT ***/
 .contactez-nous {
     background-color: #26316A;
-    opacity: 50%;
+    opacity: 100%;
 }
 
 /* MEDIA QUERIES ***/
@@ -363,7 +379,7 @@ footer {
 
 .desc-espace {
     text-align: center;
-    margin: 30px;
+    margin: 10px;
 }
 
 .desc-espace h2 {
@@ -399,7 +415,6 @@ footer {
 
 body{
     background: #F4F7FD;
-    margin-top:20px;
 }
 
 .card-margin {

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('heure_debut',5);
             $table->string('heure_fin',5);
             $table->integer('max_personnes');
-            $table->integer('nombre_inscrits');
+            $table->integer('nombre_inscrits')->default(0);
         });
     }
 

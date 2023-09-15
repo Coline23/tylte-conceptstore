@@ -16,4 +16,14 @@ class Evenement extends Model
             return $this->belongsToMany(User::class, 'reservations');
     }
 
+    protected $fillable = [
+        'nom',
+        'description_courte',
+        'description_longue',
+        'date',
+        'heure_debut',
+        'heure_fin',
+        'max_personnes'
+    ];
+
 }

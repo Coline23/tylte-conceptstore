@@ -28,51 +28,32 @@
     <!--EVENT A VENIR-->
     <section>
         <div class="container-fluid text-center mb-4">
-            <h2>ÉVÉNEMENTS À VENIR</h2>
+            <h2 class="p-4" style="font-family: Shadows Into Light, cursive; color: #26316A; font-size: 300%">ÉVÉNEMENTS À
+                VENIR</h2>
             <div class="container">
                 <div class="row">
                     @foreach ($eventavenir as $evenement)
-                        <div class="card card-margin text-center col-md-3 col-lg-4 p-1 m-2\">
-                            <div class="row
-                            p-5 justify-content-center">
-                            <div class="card-header no-border">
-                                <h5 class="card-title">{{ $evenement->nom }}</h5>
-                            </div>
-                            <div class="card-body pt-0">
-                                <div class="widget-49">
-                                    <div class="widget-49-title-wrapper">
-                                        <div class="widget-49-date-primary">
-                                            <span class="widget-49-date-day">
-                                                @php
-                                                    $datetime = DateTime::createFromFormat('Y-m-d', $evenement->date);
-                                                    echo $datetime->format('d');
-                                                @endphp
-                                            </span>
-                                            <span class="widget-49-date-month">
-                                                @php
-                                                    $datetime = DateTime::createFromFormat('Y-m-d', $evenement->date);
-                                                    echo $datetime->format('M y');
-                                                @endphp
-                                            </span>
-                                        </div>
-                                        <div class="widget-49-meeting-info">
-                                            <span class="widget-49-pro-title">{{ $evenement->description_courte }}</span>
-                                            <span class="widget-49-meeting-time">{{ $evenement->heure_debut }} -
-                                                {{ $evenement->heure_fin }}</span>
-                                        </div>
-                                    </div>
-                                    <div class="widget-49-meeting-points">
-                                        <a
-                                            class="widget-49-meeting-item"><span>{{ $evenement->description_longue }}</span></a>
-                                    </div>
-                                    <div class="widget-49-meeting-action">
-                                        <a href="{{ route('evenements.show', $evenement) }}"
-                                            class="btn btn-sm btn-flash-border-primary">Voir le détail</a>
-                                    </div>
+                        <div class="text-center col-md-4 col-lg-3 p-3">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title pb-2">{{ $evenement->nom }}</h5>
+                                    <p class="card-text">{{ substr($evenement->description_longue, 0, 100) }}...</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ substr($evenement->description_courte, 0, 25) }}...</li>
+                                    <li class="list-group-item">@php
+                                        $datetime = DateTime::createFromFormat('Y-m-d', $evenement->date);
+                                        echo $datetime->format('d M y');
+                                    @endphp</li>
+                                    <li class="list-group-item">{{ $evenement->heure_debut }} - {{ $evenement->heure_fin }}
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="{{ route('evenements.show', $evenement) }}" class="btn btn-full">Voir le
+                                        détail</a>
                                 </div>
                             </div>
                         </div>
-                </div>
                 @endforeach
             </div>
         </div>
@@ -83,53 +64,35 @@
     <section>
 
         <div class="container-fluid text-center mb-4">
-            <h2>ÉVÉNEMENTS PASSÉS</h2>
+            <h2 class="p-4 border-top border-primary"
+                style="font-family: Shadows Into Light, cursive; color: #26316A; font-size: 300%">ÉVÉNEMENTS
+                PASSÉS</h2>
             <div class="container">
                 <div class="row">
                     @foreach ($eventpasses as $evenement)
-                        <div class="card card-margin text-center col-md-3 col-lg-4 p-1 m-2\">
-                            <div class="row
-                            p-5 justify-content-center">
-                            <div class="card-header no-border">
-                                <h5 class="card-title">{{ $evenement->nom }}</h5>
-                            </div>
-                            <div class="card-body pt-0">
-                                <div class="widget-49">
-                                    <div class="widget-49-title-wrapper">
-                                        <div class="widget-49-date-primary">
-                                            <span class="widget-49-date-day">
-                                                @php
-                                                    $datetime = DateTime::createFromFormat('Y-m-d', $evenement->date);
-                                                    echo $datetime->format('d');
-                                                @endphp
-                                            </span>
-                                            <span class="widget-49-date-month">
-                                                @php
-                                                    $datetime = DateTime::createFromFormat('Y-m-d', $evenement->date);
-                                                    echo $datetime->format('M y');
-                                                @endphp
-                                            </span>
-                                        </div>
-                                        <div class="widget-49-meeting-info">
-                                            <span class="widget-49-pro-title">{{ $evenement->description_courte }}</span>
-                                            <span class="widget-49-meeting-time">{{ $evenement->heure_debut }} -
-                                                {{ $evenement->heure_fin }}</span>
-                                        </div>
-                                    </div>
-                                    <ol class="widget-49-meeting-points">
-                                        <li class="widget-49-meeting-item">
-                                            <span>{{ $evenement->description_longue }}</span>
-                                        </li>
-                                    </ol>
-                                    <div class="widget-49-meeting-action">
-                                        <a href="{{ route('evenements.show', $evenement) }}"
-                                            class="btn btn-sm btn-flash-border-primary">Voir le détail</a>
-                                    </div>
+                        <div class="text-center col-md-4 col-lg-3 p-3">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title pb-2">{{ $evenement->nom }}</h5>
+                                    <p class="card-text">{{ substr($evenement->description_longue, 0, 100) }}...</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ substr($evenement->description_courte, 0, 25) }}...</li>
+                                    <li class="list-group-item">@php
+                                        $datetime = DateTime::createFromFormat('Y-m-d', $evenement->date);
+                                        echo $datetime->format('d M y');
+                                    @endphp</li>
+                                    <li class="list-group-item">{{ $evenement->heure_debut }} - {{ $evenement->heure_fin }}
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="{{ route('evenements.show', $evenement) }}" class="btn btn-full">Voir le
+                                        détail</a>
                                 </div>
                             </div>
                         </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
         </div>
         </div>

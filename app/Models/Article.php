@@ -22,4 +22,14 @@ class Article extends Model
     {
         return $this->belongsToMany(Commande::class, 'commandes_articles')->withPivot('quantite');
     }
+
+    protected $fillable = [
+        'nom',
+        'description_courte',
+        'description_longue',
+        'prix',
+        'image',
+        'stock',
+        'gamme_id',
+    ];
 }

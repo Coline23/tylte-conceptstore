@@ -27,7 +27,7 @@ class GammeController extends Controller
             'nom' => 'required|min:5|max:30',
         ]);
 
-        Gamme::create($request->all());
+        Gamme::create(['nom'=>$request->nom]);
 
         return redirect()->route('admin.index')->with('message', 'Gamme créée avec succès');
     }

@@ -86,5 +86,24 @@ class CartController extends Controller
 
 		return view('cart/validation', ['user' => $user]);
 	}
+
+	// Ajout heure et date retrait commande
+	public function creneau(Request $request)
+	{
+		if (Gate::denies("access_order_validation")){
+			abort(403, 'Vous n\'êtes pas connecté');
+		}
+
+		$request->validate([
+            'heure_retrait' => 'required|string',
+            'date_retrait' => 'required|date'
+        ]);
+		
+		session()->put("date_retrait", $request->date_retrait);
+		session()->put("heure_retrait", $request->heure_retrait);
+
+		$user = User::find(auth()->user()->id);
+		return view('cart/validation', ['user' => $user])->with('message', 'Date et heure de retrait validé');
+	}
 }
 

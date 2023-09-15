@@ -43,8 +43,7 @@ class EvenementController extends Controller
             'date' => 'required',
             'heure_debut' => 'required|min:2|max:5',
             'heure_fin' => 'required|min:2|max:5',
-            'max_personnes' => 'required',
-            'nombre_inscrits' => 'required'
+            'max_personnes' => 'required'
         ]);
 
         Evenement::create($request->all());
@@ -82,8 +81,7 @@ class EvenementController extends Controller
             'date' => 'required',
             'heure_debut' => 'required|min:2|max:5',
             'heure_fin' => 'required|min:2|max:5',
-            'max_personnes' => 'required',
-            'nombre_inscrits' => 'required'
+            'max_personnes' => 'required'
         ]);
 
         $evenement->update($request->except('_token'));

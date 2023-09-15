@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Evenement;
+use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
@@ -27,6 +28,11 @@ class ReservationController extends Controller
         $evenementId = $request->input('evenementId');
         $user = User::find(auth()->user()->id);
         $user->reservations()->attach($evenementId);
+
+        $evenement = Evenement::find($request->input('evenementId'));
+        $evenement->nombre_inscrits+=1;
+        $evenement->save();
+
         return redirect()->back()->with('message', 'Vous êtes bien inscrit pour l\'événement !');
     }
 
