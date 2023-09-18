@@ -5,9 +5,8 @@
 @endsection
 
 @section('content')
-<header class="d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(205, 209, 228, 0.3), rgba(205, 209, 228, 0.3)), url('./images/nos-espaces-header.png'); height: 90vh;">
+<header class="d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(205, 209, 228, 0.3), rgba(205, 209, 228, 0.3)), url('./images/nos-espaces-header.png'); height: 80vh;">
     <div class="container h-50 d-flex align-items-end">
-    <div class="row home-title py-5 h-50">
 
         <div class="col-md-6 offset-md-6 mb-4 mt-5">
             <div class="intro-espaces bg-white mx-3 my-2 px-5 py-4">
@@ -16,7 +15,6 @@
             </div>
         </div>
     </div>
-</div>
 
 </header>
 

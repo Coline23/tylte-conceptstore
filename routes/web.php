@@ -52,7 +52,7 @@ Route::post('cart/add/{product}', [CartController::class, 'add'])->name('cart.ad
 Route::get('cart/remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
 Route::get('cart/empty', [CartController::class, 'empty'])->name('cart.empty');
 Route::get('cart/emptyAfterOrder', [CartController::class, 'emptyAfterOrder'])->name('cart.emptyAfterOrder');
-Route::get('cart/validation', [CartController::class, 'validation'])->name('cart.validation');
+Route::get('cart/validation', [CartController::class, 'validation'])->name('validation');
 Route::post('cart/validation', [CartController::class, 'validation'])->name('cart.validation');
 Route::post('cart/creneau', [CartController::class, 'creneau'])->name('cart.creneau');
 

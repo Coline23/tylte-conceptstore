@@ -69,7 +69,7 @@
                 
                 @if (Auth::check())
                     <!-- Lien pour valider le panier -->
-                    <a class="btn btn-success" href="{{ route('cart.validation') }}" title="validation">Valider la
+                    <a class="btn btn-success" href="{{ route('validation') }}" title="validation">Valider la
                         commande</a>
                 @else
                     <p class="p-2">Vous devez être connecté pour valider la commande.</p>

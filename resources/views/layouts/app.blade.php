@@ -30,13 +30,13 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #D98468;">
-            <div class="container-fluid">
+            <div class="container-fluid d-flex justify-content-between">
 
                 <!-- Left Side Of Navbar -->
-                <a class="ms-5 text-end" href="#"><img src="./images/logo-tylte.png" alt="concept-store" id="logo-tylte" class="ms-auto"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#monMenu"
+                <a class="ms-lg-5 text-lg-end" href="#"><img src="./images/logo-tylte.png" alt="concept-store" id="logo-tylte" class="ms-auto"></a>
+                <button class="navbar-toggler mx-5" type="button" data-bs-toggle="collapse" data-bs-target="#monMenu"
                     aria-controls="monMenu" aria-expanded="false" aria-label="Menu pour mobile">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon ms-auto"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="monMenu">
@@ -71,10 +71,10 @@
                                     <i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdown" style="color: #D98468">
 
                                     <a class="dropdown-item" href="{{ route('users.edit', $user = Auth::user()) }}"
-                                        class="text-dark">Mon compte</a>
+                                        class="text-green">Mon compte</a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();

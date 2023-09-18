@@ -40,7 +40,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12 w-50 p-3 mx-auto text-center">
+            <div class="p-3 mx-auto text-center">
                 <a href="{{ route('contact') }}"><button class="btn btn-full mx-auto">CONTACTEZ-NOUS</button></a>
             </div>
         </div>

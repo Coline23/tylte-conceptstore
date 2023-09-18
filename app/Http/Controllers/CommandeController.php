@@ -43,7 +43,7 @@ class CommandeController extends Controller
     public function show(Commande $commande) //pour les détails de l'élément spécifié
     {
         //eager loading
-        $commande->load('commandes_articles'); // je charge les articles de cette commande
+        $commande->load('articles'); // je charge les articles de cette commande
         //envoyer une vue et injecter variable dans la vue
         return view('commandes/show', ['commande' => $commande]);
 
